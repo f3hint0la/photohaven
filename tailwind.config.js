@@ -7,6 +7,9 @@ export default {
         "1/2": "50%",
         full: "100%",
       },
+      widths: {
+        76: "18.75rem",
+      },
     },
   },
   plugins: [],

@@ -27,7 +27,7 @@ const LandingPage = () => {
         <img
           src={profile}
           alt="profile"
-          className=" lg:w-[250px] lg:h-[250px] rounded-full bg-white"
+          className="lg:w-[250px] lg:h-[250px] rounded-full bg-white"
         />
         <button
           type="submit"

@@ -4,12 +4,21 @@ import { BiSearch } from "react-icons/bi";
 import { BiArrowBack } from "react-icons/bi";
 import { images } from "../data/images";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { Oval } from "react-loader-spinner";
 
 const Home = () => {
+  const [loading, setLoading] = useState(false);
   const [item, setItem] = useState(images);
   const [reorderedImage, setReorderedImage] = useState([]);
   const [goHome, setGoHome] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
 
   const handleDragEnd = (result) => {
     if (!result.destination) return;
@@ -84,7 +93,22 @@ const Home = () => {
                               {...provided.draggableProps}
                               {...provided.dragHandleProps}
                             >
-                              <img src={img} alt={`${tag} image`} />
+                              {loading ? (
+                                <Oval
+                                  height={80}
+                                  width={80}
+                                  color="#4fa94d"
+                                  wrapperStyle={{}}
+                                  wrapperClass=""
+                                  visible={true}
+                                  ariaLabel="oval-loading"
+                                  secondaryColor="#4fa94d"
+                                  strokeWidth={2}
+                                  strokeWidthSecondary={2}
+                                />
+                              ) : (
+                                <img src={img} alt={`${tag} image`} />
+                              )}
                             </div>
                           )}
                         </Draggable>
