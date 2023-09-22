@@ -33,10 +33,10 @@ const Navigation = () => {
         <h1 className="text-white text-5xl mt-3 font-bold hidden lg:block">
           photohaven.
         </h1>
-        <div className="flex px-8 relative justify-between">
+        <div className="flex px-7 relative justify-between">
           <Link
             to="/home"
-            className="text-center flex flex-col items-center py-4 px-8"
+            className="text-center text-white flex flex-col items-center py-4 px-8"
           >
             <GoHome className="text-center text-2xl" />
             <span className="">Home</span>
@@ -44,7 +44,7 @@ const Navigation = () => {
 
           <Link
             to="/"
-            className="text-center flex flex-col items-center py-4 px-8"
+            className="text-center text-white flex flex-col items-center py-4 px-8"
           >
             <BiPlus className="text-center text-2xl" />
             <span>Add</span>
@@ -52,7 +52,7 @@ const Navigation = () => {
 
           <Link
             to="/"
-            className="text-center flex flex-col items-center py-4 px-8"
+            className="text-center text-white flex flex-col items-center py-4 px-8"
             onClick={logOut}
           >
             <FiLogOut className="text-center text-2xl" />

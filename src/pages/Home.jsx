@@ -59,16 +59,16 @@ const Home = () => {
               setSearchQuery(e.target.value);
             }}
           />
-          <button className="bg-none border-0">
+          {/* <button className="bg-none border-0">
             <BiSearch className="text-2xl" />
-          </button>
+          </button> */}
         </form>
 
-        {goHome && (
+        {/* {goHome && (
           <Link to="/home">
             <BiArrowBack className=" ml-10 text-2xl justify-center mt-5" />
           </Link>
-        )}
+        )} */}
 
         <div className="block">
           <DragDropContext onDragEnd={handleDragEnd}>
@@ -94,18 +94,20 @@ const Home = () => {
                               {...provided.dragHandleProps}
                             >
                               {loading ? (
-                                <Oval
-                                  height={80}
-                                  width={80}
-                                  color="#4fa94d"
-                                  wrapperStyle={{}}
-                                  wrapperClass=""
-                                  visible={true}
-                                  ariaLabel="oval-loading"
-                                  secondaryColor="#4fa94d"
-                                  strokeWidth={2}
-                                  strokeWidthSecondary={2}
-                                />
+                                <div className="justify-center items-center mx-32 my-20">
+                                  <Oval
+                                    height={70}
+                                    width={80}
+                                    color="#4fa94d"
+                                    wrapperStyle={{}}
+                                    wrapperClass=""
+                                    visible={true}
+                                    ariaLabel="oval-loading"
+                                    secondaryColor="#4fa94d"
+                                    strokeWidth={2}
+                                    strokeWidthSecondary={2}
+                                  />
+                                </div>
                               ) : (
                                 <img src={img} alt={`${tag} image`} />
                               )}

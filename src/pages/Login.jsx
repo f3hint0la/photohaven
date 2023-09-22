@@ -105,7 +105,7 @@ const Login = () => {
 
       <button
         type="submit"
-        className="flex text-center text-gray-200 bg-lime-950 py-5 px-28 lg:py-4 lg:px-20 rounded-full items-center hover:scale-75"
+        className="flex text-center text-gray-200 bg-lime-950 py-5 px-28 lg:py-4 lg:px-20 rounded-xl items-center hover:scale-75"
         onClick={(e) => {
           loginAuthentication(e);
         }}
